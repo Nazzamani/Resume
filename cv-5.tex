@@ -1,0 +1,148 @@
+\documentclass[10pt]{article}
+\usepackage{a4}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+ 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=green!50!red,
+    filecolor=green!50!red,      
+    urlcolor= cyan!80!blue,
+}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{eso-pic}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tkz-euclide}
+\usepackage[a4paper, total={7.8in, 11.34in}]{geometry}
+
+\AddToShipoutPictureBG{%
+\begin{tikzpicture}[overlay,remember picture]
+\draw[line width=2pt, green!50!red]
+    ($ (current page.north west) + (0.25cm,-0.2cm) $)
+    rectangle
+    ($ (current page.south east) + (-0.25cm,0.2cm) $);
+\draw[line width=1pt,green!50!red]
+    ($ (current page.north west) + (0.35cm,-0.3cm) $)
+    rectangle
+    ($ (current page.south east) + (-0.35cm,0.3cm) $);
+
+
+
+
+\shade[shading=ball, ball color=white]  (19.7,28.7) circle (.4);
+\shade[shading=ball, ball color=green!50!red] (20,28.9) circle (.3);
+\shade[shading=ball, ball color=white] (20.3,29.1) circle (.2);
+
+
+// 28 -> top
+ 
+\end{tikzpicture}
+}
+
+
+ 
+
+\usepackage{multicol}
+\usepackage{txfonts} % ensures pound sign is not italic
+\usepackage{graphicx}
+\usepackage{lipsum,lmodern}
+\usepackage[skins]{tcolorbox}
+
+\newtcolorbox{imagetextbox}[3][]{%
+  before=\par\bigskip\noindent,after=\par\medskip,
+  blank,sidebyside,center lower,
+  fontlower=\fontsize{25pt}{28pt}\selectfont\bfseries,
+  width=\textwidth-#2-#3,
+  lefthand width=#2,
+  sidebyside gap=#3,#1}
+
+\newcommand{\imagetext}[3][0.11]{%
+\begin{imagetextbox}[]{#1\textwidth}{3mm}%
+  \includegraphics[width=\linewidth]{#2}%
+  \tcblower%
+   #3%
+\end{imagetextbox}}
+
+%\pagecolor{Peach!10!white}
+
+\begin{document}
+\imagetext{1.jpg}{\Large\bf Nazanin Zamani Behabadi -- \textcolor{ green!50!red}{Curriculum Vitae} \\ \normalsize October 5, 1992, Mashhad, Iran \\ \normalsize Email: \texttt{naz.zamani.b@gmail.com}\\ \small{Please visit my \href{https://github.com/Nazzamani}{\underline{GitHub}} and \href{https://nazzamani.github.io}{\underline{Website}} to see some samples of my work.}}
+\thispagestyle{empty}
+%\begin{center}
+%\Large\bf Nazanin Zamani Behabadi -- \textcolor{ green!50!red}{Curriculum Vitae}
+%\end{center}
+%\begin{center}
+%\begin{tabular}{lll}%{p{2.75in} p{3.25in} p{3in}}
+%Born October 5, 1992, Mashhad, Iran\\
+%Email: \texttt{nazanin.zamani.behabadi@gmail.com} 
+%\end{tabular}
+%\end{center}
+
+\subsection*{Education}
+%\noindent \textbf{Payam Noor University}, Iran, Master of Information Science, 2018 --Present.\\
+\noindent \textbf{University of Edinburgh}, United Kingdom, Postgraduate Diploma Computer Science, 2016 --2017.
+
+\noindent \textbf{Islamic Azad University of Mashhad}, Iran, BSc Information Technology Engineering (Hons), 2011 --2015. \\
+\indent Overall average \textbf{92\%} (top student in cohort).\\
+\indent Final Project: Levels of Trust in a Professional Social Network (LinkedIn), \textbf {Published in an IEEE conference}.\\
+\noindent \textbf{Pre-university certificate}, 2011.\\
+ \indent Overall average  \textbf{88\%}  (17.55/20).\\
+\noindent \textbf{ Three years of secondary education (high school).}\\
+\indent Overall average  \textbf{93\%}  (18.55/20).
+\subsection*{Publication}
+\begin{enumerate}
+\item \textbf{Zamani Behabadi, Nazanin}, Shakeri Hassan, \textit{Effective factors on the trust of experts in social networks: A Case Study of LinkedIn}, 7th ICTCK Conference\textbf{ (IEEE)}, Mashhad, Iran. COI:  ITPF03\_047, 2014.
+\item Ziaei Soraya, \textbf{Zamani Behabadi, Nazanin}, \textit{Plagiarism of view of postgraduate students of Payam Noor University of Mashhad}, Quarterly Journal of Knowledge and Information Management, Vol. 3, No. 1. Spring 2016, Iran.
+\end{enumerate}
+
+\subsection*{Experience and Awards}
+\textbf {Front End Developer}, Freelance, 2018--Present.\\
+\noindent\textbf {Professional Chess player},  World Chess Federation(FIDE) Rating\textbf{ 1829}, 2003--Present.\\
+\textbf {Part-time English language teacher}, Payam Noor University English institute, Mashhad, Iran, 2017--2018.\\
+\noindent\textbf {Researcher},Young Researchers Club, Islamic Azad University, 2014--2015.\\
+\noindent\textbf{Administrative Assistant}, Omran va Maskansazane Samen Company/Golshan Farzanegane Tos Company, 2011--2015.\\
+\indent Answered customer inquiries, assisted with advertising campaigns, responsible for all administrative work.
+
+\noindent\textbf{Summer internship}, Payam Noor University, Mashhad, Iran, 2013.\\
+\indent Project to index books and manuscripts.
+
+\noindent\textbf{Summer project}, Islamic Azad University, Mashhad, Iran, 2013.\\
+\indent Designed and built a follow-the-line robot.
+
+\noindent\textbf{Teacher’s Assistant}, Islamic Azad University, 2012--2013.\\
+\indent Reviewed lessons and explained assignment solutions for Data Structure and Discrete Mathematics.\\
+\indent Solved and presented extra exercises given by the instructors.\\
+\textbf{Four-semester academic scholarship} for highest class GPA , 2011--2013.\\
+\noindent\textbf {Professional Chess Coach}, 2009--2011.\\
+\textbf{Team came second place} in the international youth Chess championship in Turkey, 2009.\\ \indent \textit {(Organized by the Chess Asia to rank the best chess players in Asia and Middle East).} \\
+\noindent\textbf {License }to enter the Khwarizmi International Award for the idea of Generating Electricity from car tires, 2008.\\
+\textbf{Second rank} in the Individual \textbf{National Iranian Chess Competition}, 2007.\\
+\textbf{Second rank} in Chess Championship of the province, Middle School Group, 2005.\\
+\textbf{First rank} in Individual Chess Championship of the schools, Middle School Group, 2004.\\
+\textbf{First rank} in Individual Chess Championship of the schools, Primary School Group, 2003.
+
+\subsection*{Technical and Language Skills}
+
+\noindent \textbf{Programming Language:}  Java, Python,  JavaScript/jQuery/Bootstrap/HTML/CSS, C\#, VB.NET, SQL, MATLAB, C/C++, \LaTeX.\\
+%Pygame, PyOpenGL,
+\noindent \textbf{Software:} TensorFlow, IntelliJ IDEA, PyCharm, MATLAB, Eclipse, MySQL, Visual Studio, Jupyter Notebook, SPSS.
+
+\noindent \textbf{Operating System:} Ubuntu, macOS, Microsoft Windows.
+
+\noindent \textbf{Languages Skills: }\textbf {Farsi} (Native language), \textbf {English} (Proficient), \textbf {Arabic} (Intermediate).
+
+\subsection*{Certifications}
+\noindent \textbf{Stock Market Investing}, 2017, Payam Noor University.\\
+\noindent \textbf{C\# Programming Language}, 2012, Short-term Training Course, Iranian Academic Centre for Education, Culture and Research.
+%, MATLAB Fundamentals (MathWorks online training), Introduction to Probability and Statistics (MIT OpenCourseWare)-- in process, Calculus One (Coursera, The Ohio State University )-- in process.
+
+\subsection*{Interests}
+Cartoon drawing, Reading, Chess, and Swimming.
+
+\end{document}
+
